@@ -1,3 +1,4 @@
+// dando problema no readdir
 const fs = require('fs').promises;
 const path = require('path');
 
@@ -11,8 +12,14 @@ async function walk(files, rootDir) {
     for(let file in files) {
         const fullpath = path.resolve(rootDir, file)
         const stats = await fs.stat(fullpath);
-        console.log(file);
+        
+        if(stats.isDirectory()) {
+            readdir(fullpath);
+            continue;
+        }
+
+        console.log(fullpath);
     }
 }
 
-readdir('/home/')
+readdir()
