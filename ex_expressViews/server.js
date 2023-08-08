@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const connection = 'mongodb+srv://mateus-lopes:MateusL22!@#@cursojs01.ercspyx.mongodb.net/?retryWrites=true&w=majority';
+mongoose.connect(connection, {useNewUrlParser: true, useUnifiedTopology: true});
 const routes = require('./routes');
 const path = require('path');
 
