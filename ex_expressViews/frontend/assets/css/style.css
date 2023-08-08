@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: #115666;
+  --primary-color-darker: #093038;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color-darker);
+  font-family: 'Open sans', sans-serif;
+  text-align: center;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.div-range {
+  margin: 1em 0 0 0;
+}
+
+#generate {
+  background: #f1f1f1;
+  color: #093038;
+  border: none;
+  padding: 1.2em 6em;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 1em 0 0 0;
+  box-shadow: 0 0 10px #0000004d;
+  transition: all 0.3s ease-in-out;
+}
+
+#password {
+  margin: 1em 0;
+  color: #11819b;
+  font-size: 1.3em;
+}
+
+#password.error {
+  color: #b84040;
+}
+
+.settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.settings li {
+  list-style: none;
+}
+
+input {
+  padding: .5em;
+}
+
+.btn-run:hover {
+  background: #074857;
+  color: #f1f1f1;
+}
